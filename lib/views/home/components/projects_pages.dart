@@ -74,7 +74,7 @@ class _ProjectsPageState extends State<ProjectsPage> {
       description: "The comprehensive astrology and matchmaking app Astroscope offers a wide range of interesting features to its users.",
       imageUrl: "astro.png",
       githubLink: "https://play.google.com/store/apps/details?id=com.horoscope.kundli.astro.scope&hl=en_IN",
-      technologies: ["Flutter", "Ads", "User Messaging Platform"],
+      technologies: ["Flutter", "User Messaging Platform"],
       type: ProjectType.flutter,
     ),
     Project(
@@ -82,7 +82,7 @@ class _ProjectsPageState extends State<ProjectsPage> {
       description: "Experience a World of Puzzles: From brain teasers to logic games, we offer a diverse selection to keep your mind engaged",
       imageUrl: "brainy.png",
       githubLink: "https://play.google.com/store/apps/details?id=com.brainygamez.free.puzzle.games&hl=en_IN",
-      technologies: ["Flutter", "Android", "UMP", "GDPR"],
+      technologies: ["Flutter", "UMP", "GDPR"],
       type: ProjectType.flutter,
     ),
     Project(
@@ -178,7 +178,7 @@ class _ProjectsPageState extends State<ProjectsPage> {
       "Developed under Coolboots, these mini apps were either tool apps or mini games. KEy features are GDPR, UMP Consent Form for Ads and data policy in EU and US.",
       imageUrl: "mini.png",
       liveLink: "https://play.google.com/store/apps/details?id=rapid.racer.cargames.ca&hl=en_IN",
-      technologies: ["Flutter", "Firebase", "Analytics", "UMP", "GDPR"],
+      technologies: ["Analytics", "UMP", "GDPR"],
       type: ProjectType.flutter,
     ),
 

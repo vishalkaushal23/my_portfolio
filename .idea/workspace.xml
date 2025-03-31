@@ -5,11 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="762ed2ce-b4db-492d-935b-501091437375" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/my_portfolio.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/web/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/views/home/components/projects_pages.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/views/home/components/projects_pages.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/views/home/components/social_media_column.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/views/home/components/social_media_column.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/views/splash/components/animated_loading_text.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/views/splash/components/animated_loading_text.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/views/splash/splash.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/views/splash/splash.dart" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -45,6 +45,7 @@
     "io.flutter.reload.alreadyRun": "true",
     "kotlin-language-version-configured": "true",
     "last_opened_file_path": "C:/gits/my_portfolio",
+    "settings.editor.selected.configurable": "flutter.settings",
     "show.migrate.to.gradle.popup": "false"
   }
 }]]></component>

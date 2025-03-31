@@ -113,13 +113,13 @@ class _SocialMediaIconColumnState extends State<SocialMediaIconColumn> {
             height: displayHeight(context) * 0.030,
             width: displayWidth(context) * 0.030,
           ),
-          const SizedBox(width: 16),
+         /* const SizedBox(width: 16),
           SocialMediaIcon(
             icon: 'github.svg',
             onTap: () => launchUrlString("https://github.com/Ankit180898"),
             height: displayHeight(context) * 0.025,
             width: displayWidth(context) * 0.025,
-          ),
+          ),*/
           const SizedBox(width: 16),
           SocialMediaIcon(
             icon: 'linkedln.svg',
@@ -127,13 +127,13 @@ class _SocialMediaIconColumnState extends State<SocialMediaIconColumn> {
             height: displayHeight(context) * 0.025,
             width: displayWidth(context) * 0.025,
           ),
-          const SizedBox(width: 16),
+         /* const SizedBox(width: 16),
           SocialMediaIcon(
             icon: 'dribble.svg',
             onTap: () => launchUrlString("https://dribbble.com/ankit-me180898"),
             height: displayHeight(context) * 0.025,
             width: displayWidth(context) * 0.025,
-          ),
+          ),*/
         ],
       ),
       mobile: Row(
@@ -148,13 +148,13 @@ class _SocialMediaIconColumnState extends State<SocialMediaIconColumn> {
             height: displayHeight(context) * 0.030,
             width: displayWidth(context) * 0.030,
           ),
-          const SizedBox(width: 16),
+         /* const SizedBox(width: 16),
           SocialMediaIcon(
             icon: 'github.svg',
             onTap: () => launchUrlString("https://github.com/Ankit180898"),
             height: displayHeight(context) * 0.025,
             width: displayWidth(context) * 0.025,
-          ),
+          ),*/
           const SizedBox(width: 16),
           SocialMediaIcon(
             icon: 'linkedln.svg',
@@ -162,13 +162,13 @@ class _SocialMediaIconColumnState extends State<SocialMediaIconColumn> {
             height: displayHeight(context) * 0.025,
             width: displayWidth(context) * 0.025,
           ),
-          const SizedBox(width: 16),
+         /* const SizedBox(width: 16),
           SocialMediaIcon(
             icon: 'dribble.svg',
             onTap: () => launchUrlString("https://dribbble.com/ankit-me180898"),
             height: displayHeight(context) * 0.025,
             width: displayWidth(context) * 0.025,
-          ),
+          ),*/
         ],
       ),
     );
