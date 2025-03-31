@@ -22,3 +22,6 @@ class MyApp extends StatelessWidget {
     );
   }
 }
+
+    // flutter build web --base-href="/my_portfolio/"
+
