@@ -27,7 +27,7 @@ I'm a **Senior Mobile App Developer** with over **10 years of Android experience
 
 ## 📸 Screenshots  
 
-assets/s1.png  
+![Screenshot](https://i.postimg.cc/JzpHdfmq/Screenshot-2025-04-07-at-4-39-38-PM.png)
 assets/s2.png  
 assets/s3.png
 
