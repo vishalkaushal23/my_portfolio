@@ -1,2 +1,42 @@
-# my_portfolio
-my projects
+# 👋 Hi, I'm Vishal Kaushal
+
+I'm a **Senior Mobile App Developer** with over **10 years of Android experience** and **5 years of expertise in Flutter**. I specialize in building high-performance, scalable, and beautiful cross-platform apps using Flutter and modern technologies.
+
+---
+
+## 🚀 Tech Stack
+
+- **Languages:** Dart, Kotlin, Java
+- **Frameworks:** Flutter, Android SDK
+- **State Management:** GetX, BLoC
+- **Backend/Integrations:** Firebase, REST APIs, GraphQL, socket.io, OpenAI/ChatGPT
+- **Payments & Analytics:** Stripe, Razorpay, Google Ads, Google Analytics
+- **Tools:** Git, CI/CD, Postman, VS Code, Android Studio
+
+---
+
+## 🌐 Portfolio
+
+🎯 Check out my work here:  
+**🔗 [vishalkaushal23.github.io/my_portfolio](https://vishalkaushal23.github.io/my_portfolio/)**
+
+---
+
+## 📸 Screenshotes
+
+https://i.postimg.cc/JzpHdfmq/Screenshot-2025-04-07-at-4-39-38-PM.png
+https://i.postimg.cc/QMVKLfdr/Screenshot-2025-04-07-at-4-39-45-PM.png
+https://i.postimg.cc/762Chbzs/Screenshot-2025-04-07-at-4-40-00-PM.png
+
+
+---
+
+## 📫 Get in Touch
+
+- 📧 Email: vishalkaushal1423@gmail.com
+- 💼 LinkedIn: [linkedin.com/in/vishal-kaushal-29620096](https://www.linkedin.com/in/vishal-kaushal-29620096/)
+- 🌐 Portfolio: [vishalkaushal23.github.io/my_portfolio](https://vishalkaushal23.github.io/my_portfolio/)
+
+---
+
+> 🔄 Feel free to fork this and use it as a base for your own developer README!
