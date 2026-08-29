@@ -21,7 +21,8 @@
   <meta name="description" content="Vishal Kaushal | Flutter | Android Developer">
 
   <!-- iOS meta tags & icons -->
-  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <meta name="mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black">
   <meta name="apple-mobile-web-app-title" content="portfolio">
   <link rel="apple-touch-icon" href="icons/Icon-192.png">
@@ -43,8 +44,8 @@
     }
     .boot-wrap {
       position: relative;
-      width: 88px;
-      height: 88px;
+      width: 140px;
+      height: 140px;
       display: flex;
       align-items: center;
       justify-content: center;
@@ -53,27 +54,33 @@
       position: absolute;
       inset: 0;
       border-radius: 50%;
-      border: 2px solid rgba(45, 212, 191, 0.14);
+      border: 3px solid rgba(45, 212, 191, 0.14);
       border-top-color: #2DD4BF;
       animation: boot-spin 0.9s linear infinite;
     }
     .boot-mark {
       font-family: Inter, system-ui, sans-serif;
-      font-size: 13px;
+      font-size: 22px;
       font-weight: 700;
       letter-spacing: 0.18em;
       color: #2DD4BF;
+    }
+    @media (max-width: 700px) and (orientation: portrait) {
+      .boot-wrap {
+        width: 196px;
+        height: 196px;
+      }
+      .boot-mark {
+        font-size: 32px;
+      }
+      .boot-ring {
+        border-width: 4px;
+      }
     }
     @keyframes boot-spin {
       to { transform: rotate(360deg); }
     }
   </style>
-
-  <script>
-    // The value below is injected by flutter build, do not touch.
-    const serviceWorkerVersion = "1707952232" /* Flutter's service worker is deprecated and will be removed in a future Flutter release. */;
-  </script>
-  <script src="flutter.js" defer></script>
 </head>
 <body style="background-color:#0A0C10;margin:0;">
   <div class="boot">
@@ -82,20 +89,6 @@
       <div class="boot-mark">VK</div>
     </div>
   </div>
-  <script>
-    window.addEventListener('load', function(ev) {
-      // Download main.dart.js
-      _flutter.loader.loadEntrypoint({
-        serviceWorker: {
-          serviceWorkerVersion: serviceWorkerVersion,
-        },
-        onEntrypointLoaded: function(engineInitializer) {
-          engineInitializer.initializeEngine().then(function(appRunner) {
-            appRunner.runApp();
-          });
-        }
-      });
-    });
-  </script>
+  <script src="flutter_bootstrap.js" async></script>
 </body>
 </html>
