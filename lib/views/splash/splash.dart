@@ -5,11 +5,12 @@ import 'package:get/get.dart';
 import 'package:portfolio/views/splash/components/animated_loading_text.dart';
 
 import '../../res/constants.dart';
-import '../home/home_screen.dart';
 import 'components/animated_container.dart';
 
 class SplashScreen extends StatefulWidget {
-  const SplashScreen({super.key});
+  const SplashScreen({super.key, this.onFinished});
+
+  final VoidCallback? onFinished;
 
   @override
   State<SplashScreen> createState() => _SplashScreenState();
@@ -17,12 +18,15 @@ class SplashScreen extends StatefulWidget {
 
 class _SplashScreenState extends State<SplashScreen> {
   @override
-  @override
   void initState() {
-    // TODO: implement initState
     super.initState();
-    Timer(const Duration(milliseconds: 1500), () {
-      Get.offAll(const HomeScreen());
+    Timer(const Duration(milliseconds: 1200), () {
+      if (!mounted) return;
+      if (widget.onFinished != null) {
+        widget.onFinished!();
+      } else {
+        Get.offAllNamed('/');
+      }
     });
   }
 

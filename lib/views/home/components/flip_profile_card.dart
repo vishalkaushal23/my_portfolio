@@ -48,7 +48,7 @@ class FlipCardProfile extends StatelessWidget {
       ),
       child: ClipOval(
         child: Image.asset(
-          "mine.jpg",
+          "mine.png",
           fit: BoxFit.cover,
         ),
       ),

@@ -40,7 +40,7 @@ class ProfileCard extends StatelessWidget {
                     .transparent, // Set the background color to transparent
                 child: ClipOval(
                   child: Image.asset(
-                    "web/assets/mine.jpg",
+                    "web/assets/mine.png",
                     fit: BoxFit.cover,
                     width: displayWidth(context) *
                         0.10, // Ensure width matches the container width

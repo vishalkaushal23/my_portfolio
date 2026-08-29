@@ -4,18 +4,6 @@ import 'package:portfolio/res/constants.dart';
 import 'package:portfolio/views/responsive.dart';
 import 'package:url_launcher/url_launcher_string.dart';
 
-enum ProjectFilter {
-  all,
-  flutter,
-  android,
-}
-
-enum ProjectType {
-  flutter,
-  android,
-  design,
-}
-
 class ProjectsPage extends StatefulWidget {
   const ProjectsPage({super.key});
 
