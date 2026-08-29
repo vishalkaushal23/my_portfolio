@@ -4,6 +4,8 @@ import 'package:portfolio/controllers/nav_controller.dart';
 import 'package:portfolio/res/constants.dart';
 import 'package:portfolio/views/app_shell.dart';
 
+// flutter build web --release --base-href="/my_portfolio/"
+
 void main() {
   WidgetsFlutterBinding.ensureInitialized();
   ErrorWidget.builder = (details) {
