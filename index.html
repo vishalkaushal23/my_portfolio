@@ -2,32 +2,19 @@
 <html>
 <head>
   <!--
-    If you are serving your web app in a path other than the root, change the
-    href value below to reflect the base path you are serving from.
-
-    The path provided below has to start and end with a slash "/" in order for
-    it to work correctly.
-
-    For more details:
-    * https://developer.mozilla.org/en-US/docs/Web/HTML/Element/base
-
-    This is a placeholder for base href that will be replaced by the value of
-    the `--base-href` argument provided to `flutter build`.
+    Deploy to GitHub Pages with:
+    flutter build web --release --base-href="/my_portfolio/"
   -->
   <base href="/">
 
   <meta charset="UTF-8">
   <meta content="IE=Edge" http-equiv="X-UA-Compatible">
   <meta name="description" content="Vishal Kaushal | Flutter | Android Developer">
-
-  <!-- iOS meta tags & icons -->
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
   <meta name="mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black">
   <meta name="apple-mobile-web-app-title" content="portfolio">
   <link rel="apple-touch-icon" href="icons/Icon-192.png">
-
-  <!-- Favicon -->
   <link rel="icon" type="image/png" href="favicon.png"/>
 
   <title>vishal's portfolio</title>
@@ -40,7 +27,7 @@
       align-items: center;
       justify-content: center;
       background: #0A0C10;
-      z-index: 0;
+      z-index: 9999;
     }
     .boot-wrap {
       position: relative;
@@ -89,6 +76,50 @@
       <div class="boot-mark">VK</div>
     </div>
   </div>
-  <script src="flutter_bootstrap.js" async></script>
+  <script>
+    (async function () {
+      function resolveBaseHref() {
+        if (location.hostname.endsWith('github.io')) {
+          var first = location.pathname.split('/').filter(Boolean)[0];
+          if (first) return '/' + first + '/';
+        }
+        var built = document.querySelector('base');
+        return (built && built.getAttribute('href')) || '/';
+      }
+
+      var baseHref = resolveBaseHref();
+      var baseEl = document.querySelector('base');
+      if (!baseEl) {
+        baseEl = document.createElement('base');
+        document.head.insertBefore(baseEl, document.head.firstChild);
+      }
+      baseEl.href = baseHref;
+      window.__FLUTTER_ASSET_BASE = baseHref;
+
+      // Old Flutter deploys registered a service worker that can intercept
+      // flutter_bootstrap.js and leave the site stuck on this loader.
+      if ('serviceWorker' in navigator) {
+        var registrations = await navigator.serviceWorker.getRegistrations();
+        await Promise.all(registrations.map(function (registration) {
+          return registration.unregister();
+        }));
+      }
+      if (window.caches) {
+        var keys = await caches.keys();
+        await Promise.all(keys.map(function (key) {
+          return caches.delete(key);
+        }));
+      }
+
+      var script = document.createElement('script');
+      script.src = 'flutter_bootstrap.js';
+      script.async = true;
+      script.onerror = function () {
+        var mark = document.querySelector('.boot-mark');
+        if (mark) mark.textContent = '!';
+      };
+      document.body.appendChild(script);
+    })();
+  </script>
 </body>
 </html>
