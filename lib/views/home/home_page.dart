@@ -212,7 +212,7 @@ class _AvailabilityCard extends StatelessWidget {
             TextSpan(
               style: normalText(13),
               children: [
-                const TextSpan(text: 'Available for '),
+                // const TextSpan(text: '🟢 '),
                 TextSpan(
                   text: 'CURRENTLY OPEN',
                   style: normalText(13, textColor: accentColor)

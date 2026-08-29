@@ -25,7 +25,7 @@ const double kNavHeight = 64.0;
 const String kCvUrl =
     'https://drive.google.com/file/d/1o6ZlPIT5etlRTGKD8yVRc_4MfNmlVUmq/view?usp=sharing';
 const String kEmail = 'vishalkaushal1423@gmail.com';
-const String kPhone = '+91';
+const String kPhone = '+91-7888745936';
 const String kPhoneDisplay = 'Phone';
 const String kLinkedIn =
     'https://www.linkedin.com/in/vishal-kaushal-29620096/';
