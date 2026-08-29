@@ -78,13 +78,30 @@
   </div>
   <script>
     (async function () {
+      if (location.protocol === 'file:') {
+        document.querySelector('.boot').innerHTML =
+          '<p style="color:#9AA3B2;font-family:Inter,system-ui,sans-serif;text-align:center;max-width:28rem;line-height:1.55;padding:24px;margin:0">' +
+          'Flutter web cannot run from a local file.<br><br>' +
+          'From the project folder run:<br>' +
+          '<code style="color:#2DD4BF">python3 -m http.server 8080 --directory build/web</code><br><br>' +
+          'then open <code style="color:#2DD4BF">http://localhost:8080</code>' +
+          '</p>';
+        return;
+      }
+
       function resolveBaseHref() {
         if (location.hostname.endsWith('github.io')) {
           var first = location.pathname.split('/').filter(Boolean)[0];
           if (first) return '/' + first + '/';
         }
         var built = document.querySelector('base');
-        return (built && built.getAttribute('href')) || '/';
+        var builtHref = (built && built.getAttribute('href')) || '/';
+        // GitHub Pages builds use /my_portfolio/, but a local server of
+        // build/web is at /. Ignore the baked-in path in that case.
+        if (builtHref !== '/' && location.pathname.indexOf(builtHref) !== 0) {
+          return '/';
+        }
+        return builtHref;
       }
 
       var baseHref = resolveBaseHref();
