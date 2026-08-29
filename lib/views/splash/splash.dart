@@ -58,6 +58,17 @@ class _SplashScreenState extends State<SplashScreen>
 
   @override
   Widget build(BuildContext context) {
+    final media = MediaQuery.sizeOf(context);
+    final portrait = media.height >= media.width;
+    final compact = media.width < 700;
+    final orbit = portrait && compact
+        ? (media.width * 0.58).clamp(220.0, 300.0)
+        : compact
+            ? (media.shortestSide * 0.36).clamp(180.0, 240.0)
+            : (media.shortestSide * 0.26).clamp(220.0, 300.0);
+    final mark = orbit * 0.58;
+    final nameSize = compact && portrait ? 18.0 : compact ? 15.0 : 16.0;
+
     final logoIn = CurvedAnimation(
       parent: _intro,
       curve: const Interval(0.0, 0.45, curve: Curves.easeOutBack),
@@ -82,27 +93,27 @@ class _SplashScreenState extends State<SplashScreen>
               mainAxisSize: MainAxisSize.min,
               children: [
                 SizedBox(
-                  width: 168,
-                  height: 168,
+                  width: orbit,
+                  height: orbit,
                   child: Stack(
                     alignment: Alignment.center,
                     children: [
                       Container(
-                        width: 148 + (_pulse.value * 16),
-                        height: 148 + (_pulse.value * 16),
+                        width: orbit * 0.88 + (_pulse.value * 18),
+                        height: orbit * 0.88 + (_pulse.value * 18),
                         decoration: BoxDecoration(
                           shape: BoxShape.circle,
                           boxShadow: [
                             BoxShadow(
                               color: accentColor.withOpacity(glow),
-                              blurRadius: 36,
-                              spreadRadius: 8,
+                              blurRadius: 40,
+                              spreadRadius: 10,
                             ),
                           ],
                         ),
                       ),
                       CustomPaint(
-                        size: const Size(168, 168),
+                        size: Size(orbit, orbit),
                         painter: _OrbitPainter(
                           rotation: _spin.value * math.pi * 2,
                           accent: accentColor,
@@ -113,11 +124,11 @@ class _SplashScreenState extends State<SplashScreen>
                         child: ScaleTransition(
                           scale: Tween<double>(begin: 0.72, end: 1).animate(logoIn),
                           child: Container(
-                            width: 92,
-                            height: 92,
+                            width: mark,
+                            height: mark,
                             decoration: BoxDecoration(
                               color: bgColor,
-                              borderRadius: BorderRadius.circular(22),
+                              borderRadius: BorderRadius.circular(mark * 0.22),
                               border: Border.all(color: cardBorder),
                             ),
                             clipBehavior: Clip.antiAlias,
@@ -127,7 +138,8 @@ class _SplashScreenState extends State<SplashScreen>
                               errorBuilder: (_, __, ___) => Center(
                                 child: Text(
                                   'VK',
-                                  style: titleText(22).copyWith(color: accentColor),
+                                  style: titleText(mark * 0.24)
+                                      .copyWith(color: accentColor),
                                 ),
                               ),
                             ),
@@ -137,30 +149,33 @@ class _SplashScreenState extends State<SplashScreen>
                     ],
                   ),
                 ),
-                const SizedBox(height: 28),
+                SizedBox(height: compact ? 32 : 28),
                 FadeTransition(
                   opacity: copyIn,
                   child: Column(
                     children: [
                       Text(
                         'VISHAL KAUSHAL',
-                        style: titleText(14).copyWith(letterSpacing: 3.2),
+                        style: titleText(nameSize).copyWith(letterSpacing: 3.2),
                       ),
-                      const SizedBox(height: 6),
+                      const SizedBox(height: 8),
                       Text(
                         'Flutter  ·  Android  ·  Leadership',
-                        style: normalText(12, textColor: textSecondary),
+                        style: normalText(
+                          compact && portrait ? 14 : 12,
+                          textColor: textSecondary,
+                        ),
                       ),
                     ],
                   ),
                 ),
-                const SizedBox(height: 28),
+                SizedBox(height: compact ? 32 : 28),
                 SizedBox(
-                  width: 168,
+                  width: orbit,
                   child: ClipRRect(
                     borderRadius: BorderRadius.circular(99),
                     child: LinearProgressIndicator(
-                      minHeight: 3,
+                      minHeight: compact ? 4 : 3,
                       value: barIn.value,
                       backgroundColor: cardBorder,
                       color: accentColor,
