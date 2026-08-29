@@ -1,0 +1,1 @@
+ /Users/vishal/Documents/my\ projects/my_portfolio/.dart_tool/flutter_build/5473f73d454ce0324c34b152f38ebbf6/dart_build_result.json:  /Users/vishal/Documents/flutter/bin/cache/dart-sdk/version /Users/vishal/Documents/my\ projects/my_portfolio/.dart_tool/package_config.json /Users/vishal/Documents/my\ projects/my_portfolio/pubspec.yaml
